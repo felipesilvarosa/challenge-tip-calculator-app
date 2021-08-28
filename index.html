@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/styles/styles.css" />
+	</head>
+	<header class="header"><h1>Splitter</h1></header>
+	<body>
+		<div class="bill">
+			<h4>Bill</h4>
+			<input class="bill--total" type="number" placeholder="0" />
+		</div>
+		<div class="tip">
+			<h4>Select Tip %</h4>
+			<input class="tip--btn" type="button" value="5%" />
+			<input class="tip--btn" type="button" value="10%" />
+			<input class="tip--btn" type="button" value="15%" />
+			<input class="tip--btn" type="button" value="25%" />
+			<input class="tip--btn" type="button" value="50%" />
+			<input class="tip--custom" type="number" placeholder="Custom" />
+		</div>
+
+		<div class="people">
+			<h4>Number of People</h4>
+			<input class="people--number" type="number" placeholder="0" />
+		</div>
+
+		<div class="total">
+			<div class="total--card">
+				<div>
+					<h4>Tip Amount</h4>
+					<p>/ person</p>
+				</div>
+				<h2>4.2</h2>
+			</div>
+			<div class="total--card">
+				<div>
+					<h4>Total</h4>
+					<p>/ person</p>
+				</div>
+				<h2>32.53</h2>
+			</div>
+			<input
+				class="total--btn--reset"
+				type="button"
+				value="Reset"
+				name=""
+				id=""
+			/>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Felipe Rosa</a>.
+		</div>
+	</body>
+</html>
