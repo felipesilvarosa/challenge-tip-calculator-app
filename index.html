@@ -12,6 +12,13 @@
 			href="./images/favicon-32x32.png"
 		/>
 
+		<title>Frontend Mentor | Tip calculator app</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/styles/styles.css" />
+
+		<!-- Fonts -->
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -19,60 +26,88 @@
 			rel="stylesheet"
 		/>
 
-		<title>Frontend Mentor | Tip calculator app</title>
-
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/styles/styles.css" />
+		<!-- Script -->
+		<script src="./js/app.js" defer></script>
 	</head>
-	<header class="header"><h1>Splitter</h1></header>
 	<body>
-		<div class="bill">
-			<h4>Bill</h4>
-			<input class="bill--total" type="number" placeholder="0" />
-		</div>
-		<div class="tip">
-			<h4>Select Tip %</h4>
-			<input class="tip--btn" type="button" value="5%" />
-			<input class="tip--btn" type="button" value="10%" />
-			<input class="tip--btn" type="button" value="15%" />
-			<input class="tip--btn" type="button" value="25%" />
-			<input class="tip--btn" type="button" value="50%" />
-			<input class="tip--custom" type="number" placeholder="Custom" />
-		</div>
-
-		<div class="people">
-			<h4>Number of People</h4>
-			<input class="people--number" type="number" placeholder="0" />
-		</div>
-
-		<div class="total">
-			<div class="total--card">
-				<div>
-					<h4>Tip Amount</h4>
-					<p>/ person</p>
+		<header class="header">
+			<h1><img src="./images/logo.svg" alt="Splitter Logo" /></h1>
+		</header>
+		<main>
+			<div class="container--action">
+				<div class="bill">
+					<h4>Bill</h4>
+					<input
+						class="bill--total"
+						type="number"
+						placeholder="0"
+						data-bill
+						min="1"
+						oninput="validity.valid||(value='');"
+					/>
 				</div>
-				<h2>4.2</h2>
-			</div>
-			<div class="total--card">
-				<div>
-					<h4>Total</h4>
-					<p>/ person</p>
+				<div class="tip">
+					<h4>Select Tip %</h4>
+					<button class="tip--btn" data-tip value="5">5%</button>
+					<button class="tip--btn" data-tip value="10">10%</button>
+					<button class="tip--btn" data-tip value="15">15%</button>
+					<button class="tip--btn" data-tip value="20">20%</button>
+					<button class="tip--btn" data-tip value="50">50%</button>
+					<input
+						class="tip--custom"
+						data-tip
+						type="number"
+						placeholder="Custom"
+					/>
 				</div>
-				<h2>32.53</h2>
+
+				<div class="people">
+					<h4>Number of People</h4>
+					<input
+						class="people--number"
+						type="number"
+						placeholder="0"
+						data-people
+						min="1"
+						oninput="validity.valid||(value='');"
+					/>
+				</div>
 			</div>
-			<input
-				class="total--btn--reset"
-				type="button"
-				value="Reset"
-				name=""
-				id=""
-			/>
-		</div>
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Felipe Rosa</a>.
-		</div>
+
+			<div class="container--results">
+				<div class="total">
+					<div class="total--card">
+						<div>
+							<h4>Tip Amount</h4>
+							<p>/ person</p>
+						</div>
+						<h2 data-total-person>$0.00</h2>
+					</div>
+					<div class="total--card">
+						<div>
+							<h4>Total</h4>
+							<p>/ person</p>
+						</div>
+						<h2 data-total-value>$0.00</h2>
+					</div>
+					<input
+						class="total--btn--reset disabled"
+						type="button"
+						value="Reset"
+						name=""
+						id=""
+						data-reset
+					/>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Felipe Rosa</a>.
+			</div>
+		</footer>
 	</body>
 </html>
