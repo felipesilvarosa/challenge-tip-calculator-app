@@ -35,7 +35,6 @@ const calculate = () => {
 	const bill = getBill();
 	const tip = getTip();
 	const people = getPeople();
-
 	const tipAmount = (bill * tip) / people;
 	const total = bill / people + tipAmount;
 
@@ -66,8 +65,10 @@ tipBtn.forEach(tip => {
 
 buttonReset.addEventListener('click', () => {
 	resetSelection();
-	billInput.innerText = 0;
+	billInput.value = '';
 	totalValue.innerText = '$0.00';
 	totalTipPerson.innerText = '$0.00';
+	people.value = '';
+	tipCustom.value = '';
 	buttonReset.classList.add('disabled');
 });
