@@ -7,22 +7,22 @@ const totalValue = document.querySelector('[data-total-value]');
 const buttonReset = document.querySelector('[data-reset]');
 
 const getBill = () => {
-	return billInput.value;
+	return Number(billInput.value);
 };
 
 const getTip = () => {
 	const marcador = document.querySelector('.active');
 	let tip = 0;
 	if (marcador) {
-		tip = marcador.value;
+		tip = Number(marcador.value);
 	} else {
-		tip = tipCustom.value;
+		tip = Number(tipCustom.value);
 	}
 	return tip / 100;
 };
 
 const getPeople = () => {
-	const peopleCount = people.value;
+	const peopleCount = Number(people.value);
 	if (isNaN(peopleCount) || peopleCount == 0) return 1;
 	return peopleCount;
 };
