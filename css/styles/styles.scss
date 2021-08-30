@@ -33,7 +33,7 @@ main {
 	flex-direction: column;
 	padding-top: 2rem;
 	width: 90%;
-	h4 {
+	label {
 		align-self: flex-start;
 		text-align: left;
 		margin-bottom: 0.3rem;
@@ -66,7 +66,7 @@ main {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 90%;
-	h4 {
+	label {
 		color: $darkGrayishCyan;
 		align-self: flex-start;
 		flex-basis: 100%;
