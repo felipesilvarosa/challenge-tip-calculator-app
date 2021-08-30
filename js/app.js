@@ -6,10 +6,6 @@ const totalTipPerson = document.querySelector('[data-total-person]');
 const totalValue = document.querySelector('[data-total-value]');
 const buttonReset = document.querySelector('[data-reset]');
 
-const getBill = () => {
-	return Number(billInput.value);
-};
-
 const getTip = () => {
 	const marcador = document.querySelector('.active');
 	let tip = 0;
@@ -32,7 +28,7 @@ const resetSelection = () => {
 };
 
 const calculate = () => {
-	const bill = getBill();
+	const bill = Number(billInput.value);
 	const tip = getTip();
 	const people = getPeople();
 	const tipAmount = (bill * tip) / people;
