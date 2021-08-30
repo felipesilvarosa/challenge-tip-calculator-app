@@ -267,6 +267,10 @@ main {
 }
 
 @media screen and (min-width: 1290px) {
+	main {
+		width: 50%;
+	}
+
 	.tip {
 		.tip--custom {
 			font-size: 1.2rem;
