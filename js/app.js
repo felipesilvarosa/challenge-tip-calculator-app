@@ -42,12 +42,17 @@ const calculate = () => {
 	totalValue.textContent = `$${total.toFixed(2)}`;
 };
 
-people.addEventListener('keyup', () => {
+billInput.addEventListener('input', () => {
 	buttonReset.classList.remove('disabled');
 	calculate();
 });
 
-tipCustom.addEventListener('keyup', () => {
+people.addEventListener('input', () => {
+	buttonReset.classList.remove('disabled');
+	calculate();
+});
+
+tipCustom.addEventListener('input', () => {
 	buttonReset.classList.remove('disabled');
 	resetSelection();
 	calculate();
